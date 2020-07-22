@@ -1,13 +1,41 @@
 <html>
-    <head>
-        <title>Welcome!</title>
-    </head>
-    <body>
-        <h1>Hello world!</h1>
-        <p>We can build a full webpage here</p>
-        <form>
-            <input type="text" name="nickname" placeholder="Enter your nickname"/>
-            <input type="submit" value="Submit"/>
+
+<head>
+	<title>Welcome!</title>
+</head>
+
+<body>
+	<h1>Hello Investor!</h1>
+
+	<form>
+		<form method="POST" action="/index">
+			<p>Which type of investments are you interested in?</p>
+			<input type="checkbox" id="stock1" name="stocks" value="stocks">
+			<label for="stock1">Stocks</label><br>
+			<input type="checkbox" id="bond1"name="bonds" value="bonds">
+			<label for="bond1">Bonds</label><br>
+			<input type="checkbox" id="fund1" name="stocks" value="funds">
+			<label for="fund1">Funds</label><br>
+
+			<p>What's your budget?</p>
+			<label for="budget">Budget: </label>
+			<input type="number" id="budget"name="budget" min = "1">
+
+			<p>Are you a long-term investor or short-term investor?</p>
+			<input type="radio" id="long_term" name="type_investor" value="longTerm">
+			<label for="long_term">Long Term Investor</label><br>
+			<input type="radio" id="short_term" name="type_investor" value="shortTerm">
+			<label for="short_term">Short Term Investor</label><br>
+
+			<p>Are you interested in receiving dividends?</p>
+			<input type="radio" id="yesDividend" name="dividend" value="yes">
+			<label for="yesDividend">Yes</label><br>
+			<input type="radio" id="noDividend" name="dividend" value="no">
+			<label for="noDividend">No</label><br><br>
+
+			<input type="submit" value="Submit">
         </form>
-    </body>
+
+</body>
+
 </html>
