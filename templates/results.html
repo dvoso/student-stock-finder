@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Results</title>
+	<!-- Custom CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="static/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}?q={{ time }}" />
+	<!-- Custom Fonts -->
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+		type="text/css">
+	
+</head>
+
+<body>
+	<div class="container-fluid text-align-center head1">
+		<h1>Here are your results</h1>
+	</div>
+	<div class="container text-align-container">
+		<div class="row">
+			<div class="col-sm-6">
+				<h2> Here is a list of some of the stocks within the {{field[0]}} industry.</h2>
+				<ul>
+					{% for c in companies %}
+					<li> {{c}}</li>
+					{% endfor%}
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<h2> Below are some of the {{field[0]}} stocks you could buy based on your budget.</h2>
+				<ul>
+					{% for i in affordable %}
+					<li>{{i}}</li>
+					{% endfor%}
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- {% for i in investment %}
+	<p> {{i}}</p>
+
+	{% endfor%}
+
+	{% for i in field %}
+	<p> {{i}}</p>
+
+	{% endfor%}
+	<p>{{budget}}</p>
+
+	{% for c in companies %}
+	<p> {{c}}</p>
+	{% endfor%}
+
+	<!-- <p>Current Price: {{price}}</p>
+    <p>Industry: {{industry}} </p> -->
+	<!-- <p>These are some of the stocks you can afford to buy right now</p>
+	{% for i in affordable %}
+	<p>{{i}}</p>
+	{% endfor%} --> 
+
+
+</body>
+
+</html>
