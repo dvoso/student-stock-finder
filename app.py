@@ -66,7 +66,7 @@ def result():
         elif field[0] == 'Energy':
             company = 'NEE'
 
-        
+
         # data1 = requests.get(f'https://finnhub.io/api/v1/stock/profile2?symbol=UNH&token={finnhub_client}').json()
         print(company)
         print(field)
@@ -90,7 +90,6 @@ def result():
         print(companies)
 
         return render_template('results.html',investment=investment,field=field,budget=budget,companies=companies,affordable=affordable,time=datetime.now())
-        
+
     else:
         return render_template('results.html',time=datetime.now())
-        
